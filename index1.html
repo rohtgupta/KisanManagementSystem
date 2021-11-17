@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link href = "index.css" rel = "stylesheet" type = "text/css">
+    <script src="index.js" async></script>
+</head>
+<body  style="background-image: url(./a.jpg);
+opacity: 1;">
+
+<header class="header-fixed">
+
+	<div class="header-limiter">
+		<h1><a href="#">CROPKART :<span>An Online Auction System for Agricultural Product</span></a></h1>
+	</div>
+
+</header>
+
+    <i class="fa fa-home" style="font-size:36px;color:blue" onclick = 'location.href = "index.php" '></i><br>
+    <h1></h1>
+<div class="container fadeInDown">
+    <div id="formContent" class = "outer login">
+
+        <!-- Tabs Titles -->
+        <h2 type="menu" id='login' class="inactive underlineHover"> Sign In </h2>
+        <h2 type="menu" id = 'register' class="inactive underlineHover">Sign Up</h2>
+          
+        <div class="signupform" id="formContent" >
+
+            <h2 type="radio" name = "type" id="farmer1" class="inactive underlineHover">Farmer </h2>
+            <h2 type="radio" name = "type" id="buyer1" class="inactive underlineHover">Buyer</h2>
+        
+            <!-- <label for="type">User type:</label>
+            <input type="radio" name = "type" value=0 >
+            <label>Farmer</label>
+            <input type="radio" name = "type" value=1>
+            <label>Buyer</label> -->
+        
+    
+        <div class = 'info farmerform'>
+            <form action="register.php" method="POST">
+                <input type="text" placeholder="Enter UID" name= "UID" required>
+                <input type="text" placeholder="Enter Your Name as on UID" name = "name" required>
+                <input type="text" placeholder="Enter login ID" name = "loginid" required>
+                <input type="text" placeholder="Enter Account No. :" name = "account" required>
+                <input type="text" placeholder="Enter IFSC Code: " name = 'ifsc' required>
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$^&%*()_+-]).{4,}" 
+                title="Must contain at least one number, one uppercase, one lowercase letter, a special character, and at least 8 or more characters" placeholder="Enter Password" name = 'password'>
+                <input type="password" placeholder="Confirm Password" name = 'conf_password'>
+                <input type="submit" name = "farmerform" value="Submit" required>
+            </form>
+        </div>
+        
+        <div class="info buyerform" >
+            <form action="register.php" method="POST">
+                <input type="text" placeholder="Enter UID" name='UID' required>
+                <input type="text" placeholder="Enter Your Name as on UID" name = 'name' required>
+                <input type="text" placeholder="Enter login ID" name = "loginid" required>
+                <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$^&%*()_+-]).{4,}" 
+                title="Must contain at least one number, one uppercase, one lowercase letter, a special character, and at least 8 or more characters" placeholder="Enter Password" name = 'password'required>
+                <input type="password" placeholder="Confirm Password" name = 'conf_password' required>
+                <input type="submit" name = "buyerform" value="Submit" required>
+            </form>
+        </div>
+    </div>  
+       
+
+        <!-- Login Form -->
+        <form class="login1" action="login.php" method="POST">
+            <input type="text"  class="fadeIn second" placeholder="Enter login ID" name = "loginid" required>
+            <input type="password" class="fadeIn third" placeholder="Enter Password" name = 'password'required>
+            <input type="submit" class="fadeIn fourth" name = "login" value="Submit" required>
+        </form>
+    </div>
+</div>
+
+<!-- 
+<div class="container fadeInDown">
+    <div id="formContent">
+        <button type="menu" id='login'>Login</button>
+<button type="menu" id = 'register'>Register</button>
+
+    </div>
+</div> -->
+
+<!-- <div class="container fadeInDown" class = "outer register ">
+    <div id="formContent" >
+
+        <h2 type="radio" name = "type" id="farmer1" class="active">Farmer </h2>
+        <h2 type="radio" name = "type" id="buyer1" class="inactive underlineHover">Buyer</h2>
+    
+
+    
+
+    <div class = 'info farmerform'>
+        <form action="register.php" method="POST">
+            <input type="text" placeholder="Enter UID" name= "UID" required>
+            <input type="text" placeholder="Enter Your Name as on UID" name = "name" required>
+            <input type="text" placeholder="Enter login ID" name = "loginid" required>
+            <input type="text" placeholder="Enter Account No. :" name = "account" required>
+            <input type="text" placeholder="Enter IFSC Code: " name = 'ifsc' required>
+            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$^&%*()_+-]).{4,}" 
+            title="Must contain at least one number, one uppercase, one lowercase letter, a special character, and at least 8 or more characters" placeholder="Enter Password" name = 'password'>
+            <input type="password" placeholder="Confirm Password" name = 'conf_password'>
+            <input type="submit" name = "farmerform" value="Submit" required>
+        </form>
+    </div>
+    
+    <div class="info buyerform" >
+        <form action="register.php" method="POST">
+            <input type="text" placeholder="Enter UID" name='UID' required>
+            <input type="text" placeholder="Enter Your Name as on UID" name = 'name' required>
+            <input type="text" placeholder="Enter login ID" name = "loginid" required>
+            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$^&%*()_+-]).{4,}" 
+            title="Must contain at least one number, one uppercase, one lowercase letter, a special character, and at least 8 or more characters" placeholder="Enter Password" name = 'password'required>
+            <input type="password" placeholder="Confirm Password" name = 'conf_password' required>
+            <input type="submit" name = "buyerform" value="Submit" required>
+        </form>
+    </div>
+</div>
+</div> -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 400){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>
+
+
+<!-- Demo ads. Please ignore and remove. -->
+<!-- <script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script> -->
+</body>
+</html>
